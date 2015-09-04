@@ -22,6 +22,21 @@ test('remap a key', function (done) {
   done()
 })
 
+test('remap a key to a buffer val', function (done) {
+  var obj = {
+    data: new Buffer('buffer mumbo jumbo')
+  }
+
+  obj = remapKeys(obj, {data: 'newKey'})
+
+  var expected = {
+    newKey: new Buffer('buffer mumbo jumbo')
+  }
+
+  expect(obj).to.deep.equal(expected)
+  done()
+})
+
 test('remap two key', function (done) {
   var obj = {
     a: 'a',

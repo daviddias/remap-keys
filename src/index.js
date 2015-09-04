@@ -13,7 +13,7 @@ function remapKeys (obj, keyMap) {
       newKey = oldKey
     }
 
-    if (val instanceof Object) {
+    if (val instanceof Object && !Buffer.isBuffer(val)) {
       newObj[newKey] = _.reduce(val, remap, {})
     } else {
       newObj[newKey] = val
