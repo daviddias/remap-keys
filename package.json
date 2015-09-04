@@ -1,6 +1,6 @@
 {
   "name": "remap-keys",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Rename the keys of a JavaScript Object simply by using a map/dict to do it",
   "main": "src/index.js",
   "scripts": {
