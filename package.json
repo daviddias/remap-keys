@@ -3,14 +3,13 @@
   "version": "0.0.0",
   "description": "Rename the keys of a JavaScript Object simply by using a map/dict to do it",
   "main": "src/index.js",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
-    "test": "./node_modules/.bin/lab tests/*test.js"
+    "test": "./node_modules/.bin/lab tests/*test.js",
+    "cov": "./node_modules/.bin/lab -c tests/*test.js -t 94"
   },
   "pre-commit": [
-    "test"
+    "test",
+    "cov"
   ],
   "repository": {
     "type": "git",
