@@ -5,11 +5,13 @@
   "main": "src/index.js",
   "scripts": {
     "test": "./node_modules/.bin/lab tests/*test.js",
-    "cov": "./node_modules/.bin/lab -c tests/*test.js -t 94"
+    "cov": "./node_modules/.bin/lab -c tests/*test.js -t 94",
+    "lint": "./node_modules/.bin/standard"
   },
   "pre-commit": [
     "test",
-    "cov"
+    "cov",
+    "lint"
   ],
   "repository": {
     "type": "git",
