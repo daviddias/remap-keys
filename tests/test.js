@@ -18,7 +18,7 @@ test('remap a key', function (done) {
     newKey: 'aaah the data'
   }
 
-  expect(obj).to.deep.equal(expected)
+  expect(obj).to.equal(expected)
   done()
 })
 
@@ -33,7 +33,7 @@ test('remap a key to a buffer val', function (done) {
     newKey: new Buffer('buffer mumbo jumbo')
   }
 
-  expect(obj).to.deep.equal(expected)
+  expect(obj).to.equal(expected)
   done()
 })
 
@@ -55,7 +55,7 @@ test('remap two key', function (done) {
     ccc: 123
   }
 
-  expect(obj).to.deep.equal(expected)
+  expect(obj).to.equal(expected)
   done()
 })
 
@@ -76,7 +76,7 @@ test('remap a nested key', function (done) {
     }
   }
 
-  expect(obj).to.deep.equal(expected)
+  expect(obj).to.equal(expected)
   done()
 })
 
