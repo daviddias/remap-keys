@@ -1,9 +1,9 @@
-var _ = require('underscore')
+var reduce = require('lodash.reduce')
 
 exports = module.exports = remapKeys
 
 function remapKeys (obj, keyMap) {
-  return _.reduce(obj, remap, {})
+  return reduce(obj, remap, {})
 
   function remap (newObj, val, oldKey) {
     var newKey
@@ -14,7 +14,7 @@ function remapKeys (obj, keyMap) {
     }
 
     if (val instanceof Object && !Buffer.isBuffer(val)) {
-      newObj[newKey] = _.reduce(val, remap, {})
+      newObj[newKey] = reduce(val, remap, {})
     } else {
       newObj[newKey] = val
     }
